@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/alveusgg/alveusgg/issues"
   },
+  "packageManager": "pnpm@9.14.2",
   "dependencies": {
     "@planetscale/database": "^1.19.0",
     "@t3-oss/env-core": "^0.11.1",
