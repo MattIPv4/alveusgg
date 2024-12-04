@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/alveusgg/alveusgg/issues"
   },
+  "packageManager": "pnpm@9.14.2",
   "scripts": {
     "build:next": "next build",
     "build:next-sitemap": "next-sitemap --config next-sitemap.config.js",
