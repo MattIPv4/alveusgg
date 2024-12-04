@@ -23,8 +23,8 @@ importers:
         specifier: ^15.2.10
         version: 15.2.10
       prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.4.2
+        version: 3.4.2
 
   apps/chatbot:
     dependencies:
@@ -91,7 +91,7 @@ importers:
     dependencies:
       '@alveusgg/data':
         specifier: github:alveusgg/data#0.43.1
-        version: https://codeload.github.com/alveusgg/data/tar.gz/65759d510ae7840ec1aedda72db98b5da9c06ed8
+        version: git+https://git@github.com:alveusgg/data.git#65759d510ae7840ec1aedda72db98b5da9c06ed8
       '@aws-sdk/client-s3':
         specifier: ^3.693.0
         version: 3.693.0
@@ -371,7 +371,7 @@ importers:
         version: 8.4.49
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
-        version: 0.6.9(prettier@3.3.3)
+        version: 0.6.9(prettier@3.4.2)
       prisma:
         specifier: ^5.22.0
         version: 5.22.0
@@ -407,8 +407,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@alveusgg/data@https://codeload.github.com/alveusgg/data/tar.gz/65759d510ae7840ec1aedda72db98b5da9c06ed8':
-    resolution: {tarball: https://codeload.github.com/alveusgg/data/tar.gz/65759d510ae7840ec1aedda72db98b5da9c06ed8}
+  '@alveusgg/data@git+https://git@github.com:alveusgg/data.git#65759d510ae7840ec1aedda72db98b5da9c06ed8':
+    resolution: {commit: 65759d510ae7840ec1aedda72db98b5da9c06ed8, repo: git@github.com:alveusgg/data.git, type: git}
     version: 0.43.1
 
   '@aws-crypto/crc32@5.2.0':
@@ -5441,8 +5441,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6637,7 +6637,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@alveusgg/data@https://codeload.github.com/alveusgg/data/tar.gz/65759d510ae7840ec1aedda72db98b5da9c06ed8': {}
+  '@alveusgg/data@git+https://git@github.com:alveusgg/data.git#65759d510ae7840ec1aedda72db98b5da9c06ed8': {}
 
   '@aws-crypto/crc32@5.2.0':
     dependencies:
@@ -12894,11 +12894,11 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-tailwindcss@0.6.9(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.9(prettier@3.4.2):
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.4.2
 
-  prettier@3.3.3: {}
+  prettier@3.4.2: {}
 
   pretty-format@3.8.0: {}
 
