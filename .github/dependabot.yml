@@ -1,4 +1,15 @@
 version: 2
+
+registries:
+  npm-npmjs:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    replaces-base: true
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{secrets.GH_PKG_REGISTRY_TOKEN}}
+
 updates:
   - package-ecosystem: github-actions
     directory: /
@@ -13,6 +24,9 @@ updates:
       interval: weekly
       day: wednesday
       time: "00:00"
+
+    # Allow usage of any registry including npm-github w/ auth as above
+    registries: "*"
 
     # Ensure the new version is stored in `package.json`
     versioning-strategy: increase
@@ -45,12 +59,9 @@ updates:
         update-types:
           - patch
           - minor
-          
+
+    # Manually update major versions of `@types/node` with the version specified within .nvmrc
     ignore:
-      # Manually update major versions of `@types/node` with the version specified within .nvmrc
       - dependency-name: "@types/node"
         update-types:
           - version-update:semver-major
-
-      # Alveus.gg dependencies need GitHub Package Registry auth which dependabot doesn't handle well
-      - dependency-name: "@alveusgg/*"
