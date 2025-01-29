@@ -54,5 +54,3 @@ updates:
 
       # Alveus.gg dependencies need GitHub Package Registry auth which dependabot doesn't handle well
       - dependency-name: "@alveusgg/*"
-    allow:
-      - dependency-name: "@alveusgg/*"
