@@ -5,7 +5,6 @@ registries:
     type: npm-registry
     url: https://npm.pkg.github.com
     token: ${{secrets.GH_PKG_REGISTRY_TOKEN}}
-    replaces-base: false
 
 updates:
   - package-ecosystem: github-actions
@@ -21,6 +20,9 @@ updates:
       interval: weekly
       day: wednesday
       time: "00:00"
+
+    # Allow usage of any registry including npm-github w/ auth as above
+    registries: "*"
 
     # Ensure the new version is stored in `package.json`
     versioning-strategy: increase
