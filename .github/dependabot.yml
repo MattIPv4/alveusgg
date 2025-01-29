@@ -21,9 +21,6 @@ updates:
       day: wednesday
       time: "00:00"
 
-    # Allow usage of any registry including npm-github w/ auth as above
-    registries: "*"
-
     # Ensure the new version is stored in `package.json`
     versioning-strategy: increase
 
@@ -55,9 +52,28 @@ updates:
         update-types:
           - patch
           - minor
-
-    # Manually update major versions of `@types/node` with the version specified within .nvmrc
+          
     ignore:
+      # Manually update major versions of `@types/node` with the version specified within .nvmrc
       - dependency-name: "@types/node"
         update-types:
           - version-update:semver-major
+
+      # Alveus.gg packages will be updated below from GitHub Package Registry
+      - dependency-name: "@alveusgg/*"
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+      time: "00:00"
+
+    # Ensure the new version is stored in `package.json`
+    versioning-strategy: increase
+
+    # Use GitHub Package Registry for Alveus.gg packages
+    registries:
+      - npm-github
+    allow:
+      - dependency-name: "@alveusgg/*"
